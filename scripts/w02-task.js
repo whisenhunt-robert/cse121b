@@ -4,7 +4,7 @@
 
 /* Step 2 - Variables */
 const fullName = "Robert Whisenhunt";
-let currentYear = Date(year);
+let currentYear = new Date().getFullYear();
 let profilePicture = "images/robert.png";
 
 /* Step 3 - Element Variables */
@@ -21,8 +21,9 @@ imageElement.setAttribute("alt", `Profile image of ${nameElement}`);
 
 /* Step 5 - Array */
 let favoriteFood = ["Chicken", "Macaroni & Cheese", "Pizza", "Tacos"];
-favoriteFood.innerHTML = `${favoriteFood}`;
-favoriteFood.push("Turkey");
+foodElement.innerHTML = `${favoriteFood}`;
+let extraItem = "Turkey";
+favoriteFood.push(extraItem);
 foodElement.innerHTML += `<br>${favoriteFood}`;
 favoriteFood.shift();
 foodElement.innerHTML += `<br>${favoriteFood}`;
