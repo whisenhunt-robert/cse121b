@@ -11,16 +11,23 @@ let profilePicture = "images/robert.png";
 const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 const yearElement = document.querySelector("#year");
-const imageElement = document.getElementById("robert.png");
+const imageElement = document.querySelector("img");
 
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
-currentYear.textContent = text;
+yearElement.textContent = currentYear;
 imageElement.setAttribute("src", profilePicture);
-
+imageElement.setAttribute("alt", `Profile image of ${nameElement}`);
 
 /* Step 5 - Array */
-
+let favoriteFood = ["Chicken", "Macaroni & Cheese", "Pizza", "Tacos"];
+favoriteFood.innerHTML = `${favoriteFood}`;
+favoriteFood.push("Turkey");
+foodElement.innerHTML += `<br>${favoriteFood}`;
+favoriteFood.shift();
+foodElement.innerHTML += `<br>${favoriteFood}`;
+favoriteFood.pop();
+foodElement.innerHTML += `<br>${favoriteFood}`;
 
 
 
