@@ -37,6 +37,10 @@ function higher() {
         document.getElementById("cpuResults").innerHTML = "My number is: " + cpuNumber
         /* If the CPU's number is higher than the player's, it prints this. */
         document.getElementById("outcome").innerHTML = outcome[1]
+        /* I wanted to make it where this video plays in another tab if you lose. */
+        fetch("https://www.youtube.com/watch?v=H47ow4_Cmk0", {
+            credentials: "omit",
+        });
     }
     else if(playerNumber == cpuNumber) {
         /* This prints the player's number. */
